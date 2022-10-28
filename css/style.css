@@ -1,0 +1,70 @@
+@import url('custom_reset.css');
+@import url('custom_colors.css');
+
+
+.header-bg{
+    background-color: var(--cor-12);
+}
+
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-menu-nav{
+    display: flex;
+    gap: 40px;
+    
+}
+
+.header-menu-item{
+    padding: 18px 25px;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 6px;
+    color: var(--cor-0);
+    
+}
+.header-menu-item::after{
+content: "";
+height: 2px;
+width: 0;
+position: absolute;
+
+margin-top: 2px;
+
+background-color: var(--cor-0);
+display: block;
+transition: 0.3s;
+}
+
+.header-menu-item:hover::after{
+    width: 100%;
+}
+
+
+
+@media (max-width:800px) {
+    .header-container{
+        justify-content: center;
+        gap: 40px;
+    }
+    .header-menu-item{
+        background-color: var(--color-3);
+        font-size: 16px;
+    }   
+
+    .header-menu-item::after{
+        display: none;
+    }
+
+    .header-menu-item:hover{
+        background-color: var(--cor-11);
+    }
+
+}
